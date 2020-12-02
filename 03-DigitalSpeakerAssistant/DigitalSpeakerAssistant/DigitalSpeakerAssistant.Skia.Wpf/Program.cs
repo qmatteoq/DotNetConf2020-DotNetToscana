@@ -1,0 +1,4 @@
+﻿
+namespace DigitalSpeakerAssistant.Skia.Gtk
+{
+}

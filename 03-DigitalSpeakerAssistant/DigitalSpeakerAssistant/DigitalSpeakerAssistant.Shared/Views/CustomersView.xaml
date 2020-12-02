@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="DigitalSpeakerAssistant.Shared.Views.CustomersView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigitalSpeakerAssistant.Shared.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:models="using:DigitalSpeakerAssistant.Shared.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <toolkit:DataGrid 
+            Margin="12"
+            Height="600"
+            ItemsSource="{Binding Customers, Mode=OneWay}"
+            AutoGenerateColumns="False">
+            <toolkit:DataGrid.Columns>
+                <toolkit:DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
+                <toolkit:DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+                <toolkit:DataGridTextColumn Header="E-mail" Binding="{Binding Email}" />
+            </toolkit:DataGrid.Columns>
+        </toolkit:DataGrid>
+
+        <!--<ListView ItemsSource="{x:Bind Path=ViewModel.Customers, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Customer">
+                    <TextBlock Text="{x:Bind FirstName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+    </Grid>
+</Page>

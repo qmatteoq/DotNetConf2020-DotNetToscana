@@ -1,0 +1,4 @@
+﻿
+namespace BasicSample.Skia.Gtk
+{
+}
